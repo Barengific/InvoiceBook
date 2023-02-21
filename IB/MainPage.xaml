@@ -9,11 +9,46 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox x:Name="TitleTextBox"  HorizontalAlignment="Left" Margin="362,368,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="82" Width="142"/>
-        <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Left" Margin="608,368,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="82" Width="142"/>
-        <TextBox x:Name="ContentTextBox" HorizontalAlignment="Left" Margin="934,368,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="82" Width="142"/>
+        <TextBox PlaceholderText="Business Address" x:Name="1"  HorizontalAlignment="Left" Margin="362,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="142"/>
+        <TextBox PlaceholderText="Recipient Business" x:Name="2" HorizontalAlignment="Left" Margin="608,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="142"/>
+        <TextBox PlaceholderText="Business VAT  Reg No." x:Name="3" HorizontalAlignment="Left" Margin="934,368,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="82" Width="142"/>
 
+        <TextBox PlaceholderText="Invoice No." x:Name="4"  HorizontalAlignment="Left" Margin="362,460,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="142"/>
+        <TextBox PlaceholderText="Invoice Date" x:Name="5" HorizontalAlignment="Left" Margin="362,500,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="142"/>
+        <TextBox PlaceholderText="Ref" x:Name="6" HorizontalAlignment="Left" Margin="362,540,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="142"/>
+        <TextBox PlaceholderText="Account Ref" x:Name="7" HorizontalAlignment="Left" Margin="362,580,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="142"/>
 
+        <TextBox PlaceholderText="Account Ref" x:Name="8" HorizontalAlignment="Left" Margin="362,580,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="142"/>
+
+        <ListView x:Name="ItemList">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding ItemDescription}" 
+                           Margin="20,0,20,8"
+                           FontSize="24" 
+                           FontStyle="Italic" 
+                           FontWeight="SemiBold"
+                           Foreground="DarkBlue" />
+                        <TextBlock Text="{Binding ItemCost}" 
+                           Margin="20,0,20,8"
+                           FontSize="16"
+                           Foreground="DarkGray" 
+                           Opacity="0.8" />
+                        <TextBlock Text="{Binding ItemVatPer}" 
+                           Margin="20,0,20,8"
+                           FontSize="16"
+                           Foreground="DarkGray" 
+                           Opacity="0.8" />
+                        <TextBlock Text="{Binding ItemVATCost}" 
+                           Margin="20,0,20,8"
+                           FontSize="16"
+                           Foreground="DarkGray" 
+                           Opacity="0.8" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </Page>
