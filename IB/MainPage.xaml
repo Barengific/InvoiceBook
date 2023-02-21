@@ -9,6 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBox x:Name="TitleTextBox"  HorizontalAlignment="Left" Margin="362,368,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="82" Width="142"/>
+        <TextBox x:Name="AuthorTextBox" HorizontalAlignment="Left" Margin="608,368,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="82" Width="142"/>
+        <TextBox x:Name="ContentTextBox" HorizontalAlignment="Left" Margin="934,368,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Height="82" Width="142"/>
+
+
 
     </Grid>
 </Page>
