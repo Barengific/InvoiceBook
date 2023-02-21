@@ -46,4 +46,12 @@ namespace IB
         }
 
     }
+
+    public class ItemList
+    {
+        public string ItemDescription { get; set; }
+        public double ItemCost { get; set; }
+        public double ItemVatPer { get; set; }
+        public double ItemVATCost { get; set; }
+    }
 }
