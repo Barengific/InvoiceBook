@@ -44,8 +44,19 @@ namespace IB
             //document.Add(header);
             //document.Close();
 
+
+
         }
 
+        private void BtnAddItem(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnAddTerms(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public class ItemList
@@ -55,4 +66,6 @@ namespace IB
         public double ItemVatPer { get; set; }
         public double ItemVATCost { get; set; }
     }
+
+
 }
