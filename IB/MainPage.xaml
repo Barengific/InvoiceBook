@@ -25,6 +25,16 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -36,59 +46,59 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="100" Text="Invoice Form" Style="{StaticResource SubheaderTextBlockStyle}" />
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="100" Text="Invoice Form" Style="{StaticResource SubheaderTextBlockStyle}" Padding="5"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="0" Text="Invoice Number" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="2" Grid.Column="0"  PlaceholderText="Enter Invoice Number" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Invoice Number" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="2" Grid.Column="0"  PlaceholderText="Enter Invoice Number" Margin="0,0,10,0" />
 
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="VAT Number" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="2" Grid.Column="1" PlaceholderText="VAT Number" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="VAT Number" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="2" Grid.Column="1" PlaceholderText="VAT Number" Margin="0,0,10,0"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="2" Text="Business Name" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="2" Grid.Column="2" PlaceholderText="Business Name" />
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="Business Name" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="2" Grid.Column="2" PlaceholderText="Business Name" Margin="0,0,10,0"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="3" Text="Business Logo" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="2" Grid.Column="3" PlaceholderText="Business Logo" />
+        <TextBlock Grid.Row="1" Grid.Column="3" Text="Business Logo" Style="{StaticResource BodyTextBlockStyle}" Padding="5"  Margin="0,10,0,0"/>
+        <TextBox Grid.Row="2" Grid.Column="3" PlaceholderText="Business Logo" Margin="0,0,10,0"/>
 
 
-        <TextBlock Grid.Row="3" Text="Date" Style="{StaticResource BodyTextBlockStyle}" />
+        <TextBlock Grid.Row="3" Text="Date" Style="{StaticResource BodyTextBlockStyle}"  Padding="5" Margin="0,10,0,0"/>
         <DatePicker Grid.Row="4" />
 
-        
-        
-
-        <TextBlock Grid.Row="5" Grid.Column="0" Text="Company Address" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="6" Grid.RowSpan="5" Grid.Column="0" AcceptsReturn="True" PlaceholderText="Enter Address" />
-
-        <TextBlock Grid.Row="5" Grid.Column="1" Text="Company Address" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="6" Grid.RowSpan="5" Grid.Column="1" PlaceholderText="Enter Address" />
 
 
 
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Company Address" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="6" Grid.RowSpan="5" Grid.Column="0" AcceptsReturn="True" PlaceholderText="Enter Address" Margin="0,0,10,0"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="1" Text="Company Address" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="6" Grid.RowSpan="5" Grid.Column="1" PlaceholderText="Enter Address" Margin="0,0,10,0"/>
 
 
-        <TextBlock Grid.Row="12" Grid.Column="0" Text="Description" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="13" Grid.Column="0" PlaceholderText="Enter Description" />
 
-        <TextBlock Grid.Row="12" Grid.Column="1" Text="Quantity" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="13" Grid.Column="1" PlaceholderText="Enter Quantity" />
 
-        <TextBlock Grid.Row="12" Grid.Column="2" Text="Unit Price" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="13" Grid.Column="2" PlaceholderText="Enter Price" />
 
-        <TextBlock Grid.Row="12" Grid.Column="3" Text="VAT Per" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="13" Grid.Column="3" PlaceholderText="Enter VAT Per" />
+        <TextBlock Grid.Row="12" Grid.Column="0" Text="Description" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="13" Grid.Column="0" PlaceholderText="Enter Description" Margin="0,0,10,0"/>
 
-        <TextBlock Grid.Row="12" Grid.Column="4" Text="VAT Price" Style="{StaticResource BodyTextBlockStyle}" />
-        <TextBox Grid.Row="13" Grid.Column="4" PlaceholderText="Enter VAT" />
+        <TextBlock Grid.Row="12" Grid.Column="1" Text="Quantity" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="13" Grid.Column="1" PlaceholderText="Enter Quantity" Margin="0,0,10,0"/>
 
-        <TextBlock Grid.Row="12" Grid.Column="5" Text="Total Price" Style="{StaticResource BodyTextBlockStyle}" />
+        <TextBlock Grid.Row="12" Grid.Column="2" Text="Unit Price" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="13" Grid.Column="2" PlaceholderText="Enter Price" Margin="0,0,10,0"/>
+
+        <TextBlock Grid.Row="12" Grid.Column="3" Text="VAT Per" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="13" Grid.Column="3" PlaceholderText="Enter VAT Per" Margin="0,0,10,0"/>
+
+        <TextBlock Grid.Row="12" Grid.Column="4" Text="VAT Price" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="13" Grid.Column="4" PlaceholderText="Enter VAT" Margin="0,0,10,0"/>
+
+        <TextBlock Grid.Row="12" Grid.Column="5" Text="Total Price" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
         <TextBox Grid.Row="13" Grid.Column="5" PlaceholderText="Enter Total" />
 
 
-        <Button Grid.Row="14" Content="Add Item" />
+        <Button Grid.Row="14" Grid.Column="0" Content="Add Item" Padding="5"  Margin="0,10,0,0" Click="BtnAddItem"/>
 
-        <ListView x:Name="ItemList" Grid.Row="15" Grid.ColumnSpan="100">
+        <ListView x:Name="ItemList" Grid.Row="15" Grid.ColumnSpan="100" Padding="5" Margin="0,10,0,0">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -119,5 +129,31 @@
         </ListView>
 
         
+        
+        <TextBlock Grid.Row="16" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="17" Grid.Column="0" PlaceholderText="Enter Terms" />
+
+        <Button Grid.Row="18" Grid.Column="0" Content="Add Terms" Padding="5"  Margin="0,10,0,0" Click="BtnAddTerms"/>
+
+        <ListView x:Name="TermsList" Grid.Row="19" Grid.ColumnSpan="100" Padding="5" Margin="0,10,0,0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding TermNumber}" 
+                           Margin="20,0,20,8"
+                           FontSize="24" 
+                           FontStyle="Italic" 
+                           FontWeight="SemiBold"
+                           Foreground="DarkBlue" />
+                        <TextBlock Text="{Binding TermDescription}" 
+                           Margin="20,0,20,8"
+                           FontSize="16"
+                           Foreground="DarkGray" 
+                           Opacity="0.8" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </Grid>
 </Page>
