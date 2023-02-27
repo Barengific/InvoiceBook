@@ -89,22 +89,22 @@
 
 
         <TextBlock Grid.Row="12" Grid.Column="0" Text="Description" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="13" Grid.Column="0" PlaceholderText="Enter Description" Margin="0,0,10,0"/>
+        <TextBox x:Name="txtIDes" Grid.Row="13" Grid.Column="0" PlaceholderText="Enter Description" Margin="0,0,10,0"/>
 
         <TextBlock Grid.Row="12" Grid.Column="1" Text="Quantity" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="13" Grid.Column="1" PlaceholderText="Enter Quantity" Margin="0,0,10,0"/>
+        <TextBox x:Name="txtIQuan" Grid.Row="13" Grid.Column="1" PlaceholderText="Enter Quantity" Margin="0,0,10,0"/>
 
         <TextBlock Grid.Row="12" Grid.Column="2" Text="Unit Price" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="13" Grid.Column="2" PlaceholderText="Enter Price" Margin="0,0,10,0"/>
+        <TextBox x:Name="txtIPrice" Grid.Row="13" Grid.Column="2" PlaceholderText="Enter Price" Margin="0,0,10,0"/>
 
         <TextBlock Grid.Row="12" Grid.Column="3" Text="VAT Per" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="13" Grid.Column="3" PlaceholderText="Enter VAT Per" Margin="0,0,10,0"/>
+        <TextBox x:Name="txtIVatP" Grid.Row="13" Grid.Column="3" PlaceholderText="Enter VAT Per" Margin="0,0,10,0"/>
 
         <TextBlock Grid.Row="12" Grid.Column="4" Text="VAT Price" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="13" Grid.Column="4" PlaceholderText="Enter VAT" Margin="0,0,10,0"/>
+        <TextBox x:Name="txtIVat" Grid.Row="13" Grid.Column="4" PlaceholderText="Enter VAT" Margin="0,0,10,0"/>
 
         <TextBlock Grid.Row="12" Grid.Column="5" Text="Total Price" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="13" Grid.Column="5" PlaceholderText="Enter Total" />
+        <TextBox x:Name="txtITotal" Grid.Row="13" Grid.Column="5" PlaceholderText="Enter Total" />
 
 
         <Button Grid.Row="14" Grid.Column="0" Content="Add Item" Padding="5"  Margin="0,10,0,0" Click="BtnAddItem"/>
@@ -115,26 +115,20 @@
                 <DataTemplate>
                     <StackPanel>
                         <TextBlock Text="{Binding ItemDescription}" />
-                        <TextBlock Text="{Binding ItemCost}" />
+                        <TextBlock Text="{Binding ItemQuantity}" />
+                        <TextBlock Text="{Binding ItemPrice}" />
                         <TextBlock Text="{Binding ItemVatPer}" />
                         <TextBlock Text="{Binding ItemVATCost}"  />
+                        <TextBlock Text="{Binding ItemTotal}" />
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
 
-        
+
 
         <TextBlock Grid.Row="16" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBlock Grid.Row="17" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBlock Grid.Row="18" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBlock Grid.Row="19" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBlock Grid.Row="20" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBlock Grid.Row="21" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBlock Grid.Row="22" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-
-        <TextBlock Grid.Row="23" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
-        <TextBox Grid.Row="24" Grid.Column="0" PlaceholderText="Enter Terms" />
+        <TextBox x:Name="txtTerms" Grid.Row="17" Grid.Column="0" PlaceholderText="Enter Terms" />
 
         <Button Grid.Row="25" Grid.Column="0" Content="Add Terms" Padding="5"  Margin="0,10,0,0" Click="BtnAddTerms"/>
 
