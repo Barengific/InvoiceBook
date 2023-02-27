@@ -26,6 +26,8 @@ using Microsoft.Data.Sqlite;
 
 using System.Security.Permissions;
 using System.Security;
+using PdfSharp.Charting;
+using Windows.Services.Store;
 
 namespace IB
 {
@@ -56,21 +58,13 @@ namespace IB
             //});
 
             ItemsLists.Items.Add(new ItemssList() {
-                ItemDescription ="aa", 
-                ItemCost = "bb",
-                ItemVatPer = "ccc",
-                ItemVATCost = "ddd"
-                });
-
-                    
-
-        ItemsLists.Items.Add(new ItemssList()
-        {
-            ItemDescription = "zz", 
-                ItemCost = "xxx",
-                ItemVatPer = "yy",
-                ItemVATCost = "uu"
-                });
+                ItemDescription = "aaa",
+                ItemQuantity = "bbbb",
+                ItemPrice = "ccc",
+                ItemVatPer = "dddd",
+                ItemVATCost = "eee",
+                ItemTotal = "fff"
+            });
 
             TermsList.Items.Add(new TermsList()
             {
@@ -87,19 +81,40 @@ namespace IB
         }
     private void BtnAddItem(object sender, RoutedEventArgs e)
         {
+            string strDes = txtIDes.Text;
+            string strQuan = txtIQuan.Text;
+            string strPrice = txtIPrice.Text;
+            string strVatP = txtIVatP.Text;
+            string strVat = txtIVat.Text;
+            string strTotal = txtITotal.Text;
+
+            ItemsLists.Items.Add(new ItemssList()
+            {
+                ItemDescription = strDes,
+                ItemQuantity= strQuan,
+                ItemPrice = strPrice,
+                ItemVatPer = strVatP,
+                ItemVATCost = strVat,
+                ItemTotal = strTotal
+            });
+
 
         }
         private void BtnAddTerms(object sender, RoutedEventArgs e)
         {
+            string strTerms = txtTerms.Text;
 
         }
     }
     public class ItemssList
     {
         public string ItemDescription { get; set; }
-        public string ItemCost { get; set; }
+        public string ItemQuantity { get; set; }
+        public string ItemPrice { get; set; }
         public string ItemVatPer { get; set; }
         public string ItemVATCost { get; set; }
+        public string ItemTotal { get; set; }
+
     }
 
     public class TermsList
