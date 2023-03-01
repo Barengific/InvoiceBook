@@ -4,6 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -110,21 +112,22 @@
         <Button Grid.Row="14" Grid.Column="0" Content="Add Item" Padding="5"  Margin="0,10,0,0" Click="BtnAddItem"/>
 
         
-        <ListView x:Name="ItemsLists" Grid.Row="15" Grid.ColumnSpan="100" Padding="5" Margin="0,10,0,0">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding ItemDescription}" />
-                        <TextBlock Text="{Binding ItemQuantity}" />
-                        <TextBlock Text="{Binding ItemPrice}" />
-                        <TextBlock Text="{Binding ItemVatPer}" />
-                        <TextBlock Text="{Binding ItemVATCost}"  />
-                        <TextBlock Text="{Binding ItemTotal}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-
+        <controls:DataGrid x:Name="ItemssLists" Grid.Row="15" Grid.ColumnSpan="100" Padding="5" Margin="0,10,0,0"
+                  ItemsSource="{x:Bind ItemssLists}"
+                  AutoGenerateColumns="False">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn Header="First Name"
+                                             Binding="{Binding FirstName}"/>
+                <controls:DataGridTextColumn Header="Last Name"
+                                             Binding="{Binding LastName}"/>
+                <controls:DataGridTextColumn Header="Position"
+                                             Binding="{Binding Position}"/>
+                <controls:DataGridComboBoxColumn Header="Department"
+                                                 Binding="{Binding DepartmentId}"                                                  
+                                                 ItemsSource="{x:Bind Departments, Mode=OneWay}"
+                                                 DisplayMemberPath="DepartmentName"/>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
 
 
         <TextBlock Grid.Row="16" Grid.Column="0" Text="Terms and Conditions" Style="{StaticResource BodyTextBlockStyle}" Padding="5" Margin="0,10,0,0"/>
