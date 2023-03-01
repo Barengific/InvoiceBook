@@ -26,7 +26,6 @@ using Microsoft.Data.Sqlite;
 
 using System.Security.Permissions;
 using System.Security;
-using PdfSharp.Charting;
 using Windows.Services.Store;
 
 namespace IB
