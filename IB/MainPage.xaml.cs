@@ -33,6 +33,7 @@ namespace IB
 
     public sealed partial class MainPage : Page
     {
+        public List<ItemssList> ItemLister { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
@@ -56,14 +57,14 @@ namespace IB
             //    EmployeeID = getUsers?.Response?.Data?.PersonList?.PersonInfoList?[i]?.IdentificationList?[0]?.Number
             //});
 
-            ItemsLists.Items.Add(new ItemssList() {
-                ItemDescription = "aaa",
-                ItemQuantity = "bbbb",
-                ItemPrice = "ccc",
-                ItemVatPer = "dddd",
-                ItemVATCost = "eee",
-                ItemTotal = "fff"
-            });
+            //ItemsLists.Items.Add(new ItemssList() {
+            //    ItemDescription = "aaa",
+            //    ItemQuantity = "bbbb",
+            //    ItemPrice = "ccc",
+            //    ItemVatPer = "dddd",
+            //    ItemVATCost = "eee",
+            //    ItemTotal = "fff"
+            //});
 
             TermsList.Items.Add(new TermsList()
             {
@@ -87,15 +88,15 @@ namespace IB
             string strVat = txtIVat.Text;
             string strTotal = txtITotal.Text;
 
-            ItemsLists.Items.Add(new ItemssList()
-            {
-                ItemDescription = strDes,
-                ItemQuantity= strQuan,
-                ItemPrice = strPrice,
-                ItemVatPer = strVatP,
-                ItemVATCost = strVat,
-                ItemTotal = strTotal
-            });
+            //ItemsLists.Items.Add(new ItemssList()
+            //{
+            //    ItemDescription = strDes,
+            //    ItemQuantity= strQuan,
+            //    ItemPrice = strPrice,
+            //    ItemVatPer = strVatP,
+            //    ItemVATCost = strVat,
+            //    ItemTotal = strTotal
+            //});
 
 
         }
