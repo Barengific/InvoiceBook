@@ -27,6 +27,9 @@ using Microsoft.Data.Sqlite;
 using System.Security.Permissions;
 using System.Security;
 using Windows.Services.Store;
+using System.Diagnostics;
+using System.Collections;
+using System.ComponentModel;
 
 namespace IB
 {
@@ -66,21 +69,38 @@ namespace IB
             //    ItemTotal = "fff"
             //});
 
-            TermsList.Items.Add(new TermsList()
-            {
-                TermNumber = "aaa",
-                TermDescription = "bbbbbbbbbbbbbbbb"
-            });
+            //TermsList.Items.Add(new TermsList()
+            //{
+            //    TermNumber = "aaa",
+            //    TermDescription = "bbbbbbbbbbbbbbbb"
+            //});
 
-            TermsList.Items.Add(new TermsList()
-            {
-                TermNumber = "tttt",
-                TermDescription = "rrrrrr"
-            });
+            //TermsList.Items.Add(new TermsList()
+            //{
+            //    TermNumber = "tttt",
+            //    TermDescription = "rrrrrr"
+            //});
 
+
+            ItemLister = new List<ItemssList>();
+
+            //ItemLister.Add(new ItemssList()
+            //{
+            //    ItemDescription = "aaa",
+            //    ItemQuantity = "bbb",
+            //    ItemPrice = "cccc",
+            //    ItemVatPer = "ddd",
+            //    ItemVATCost = "eeee",
+            //    ItemTotal = "gggg"
+            //});
+
+            Console.WriteLine("startrrttttedkjhjkjkl!!!!!!!!!!!!!!!!!!!!!!!!!! ");
+            Debug.WriteLine("startrrttttedkjhjkjkl!!!!!!!!!!!!!!!!!!!!!!!!!! ");
         }
     private void BtnAddItem(object sender, RoutedEventArgs e)
         {
+            Debug.WriteLine("bottton adddd item presssed");
+            Console.WriteLine("bottton adddd item presssed ");
             string strDes = txtIDes.Text;
             string strQuan = txtIQuan.Text;
             string strPrice = txtIPrice.Text;
@@ -88,15 +108,35 @@ namespace IB
             string strVat = txtIVat.Text;
             string strTotal = txtITotal.Text;
 
-            //ItemsLists.Items.Add(new ItemssList()
+            Debug.WriteLine("string is for dxespc" + strDes);
+
+            //ItemLister = new List<ItemssList>();
+
+            ItemLister.Add(new ItemssList()
+            {
+                ItemDescription = strDes,
+                ItemQuantity = strQuan,
+                ItemPrice = strPrice,
+                ItemVatPer = strVatP,
+                ItemVATCost = strVat,
+                ItemTotal = strTotal
+            });
+
+            //ItemssssLIst.DataContextChanged;
+
+            
+
+            //ItemLister.Add(new ItemssList()
             //{
-            //    ItemDescription = strDes,
-            //    ItemQuantity= strQuan,
-            //    ItemPrice = strPrice,
-            //    ItemVatPer = strVatP,
-            //    ItemVATCost = strVat,
-            //    ItemTotal = strTotal
+            //    ItemDescription = "aaa",
+            //    ItemQuantity = "bbb",
+            //    ItemPrice = "cccc",
+            //    ItemVatPer = "ddd",
+            //    ItemVATCost = "eeee",
+            //    ItemTotal = "gggg"
             //});
+
+            Debug.WriteLine("DEONEEE" + strDes);
 
 
         }
@@ -104,9 +144,19 @@ namespace IB
         {
             string strTerms = txtTerms.Text;
 
+
+            foreach (ItemssList item in ItemLister)
+            {
+                Debug.WriteLine("!!!!!!!!!!!!!!!!!");
+                Debug.WriteLine(item.ItemDescription.ToString());
+                Debug.WriteLine(item.ItemQuantity.ToString());
+            }
+
+
+
         }
     }
-    public class ItemssList
+    public class ItemssList : INotifyPropertyChanged
     {
         public string ItemDescription { get; set; }
         public string ItemQuantity { get; set; }
@@ -115,7 +165,19 @@ namespace IB
         public string ItemVATCost { get; set; }
         public string ItemTotal { get; set; }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void RaisePropertyChanged(string name)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+            }
+        }
+
     }
+
+
+
 
     public class TermsList
     {
