@@ -52,7 +52,7 @@
       </children>
    </HBox>
    <DatePicker fx:id="dpDate" promptText="Invoice Date" />
-   <TextArea prefHeight="200.0" prefWidth="200.0" text="Company Address" />
+   <TextArea fx:id="taBusinessAddress" prefHeight="200.0" prefWidth="200.0" promptText="Business Address" />
    <HBox fx:id="hboxItems" prefHeight="43.0" prefWidth="778.0" spacing="5.0">
       <children>
          <TextField fx:id="txtDescription" promptText="Item Description" />
@@ -82,8 +82,8 @@
    <Button fx:id="btnAddTerms" mnemonicParsing="false" onAction="#onAddTermsBtn" text="Add Terms" />
    <TableView fx:id="tblTerms" prefHeight="200.0" prefWidth="200.0">
      <columns>
-       <TableColumn prefWidth="75.0" text="Terms Number" />
-       <TableColumn prefWidth="75.0" text="Terms" />
+       <TableColumn fx:id="tcNo" prefWidth="75.0" text="Terms Number" />
+       <TableColumn fx:id="tcTerms" prefWidth="75.0" text="Terms" />
      </columns>
    </TableView>
 </VBox>
