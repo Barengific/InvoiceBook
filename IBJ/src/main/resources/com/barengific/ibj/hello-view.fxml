@@ -66,12 +66,12 @@
    <Button fx:id="btnAddItems" mnemonicParsing="false" onAction="#onAddItemBtn" text="Add Item" />
    <TableView fx:id="tblItems" prefHeight="200.0" prefWidth="200.0">
      <columns>
-         <TableColumn prefWidth="75.0" text="Description" />
-         <TableColumn prefWidth="75.0" text="Quantity" />
-         <TableColumn prefWidth="75.0" text="Unit Price" />
-       <TableColumn prefWidth="75.0" text="VAT %" />
-         <TableColumn prefWidth="75.0" text="VAT Cost" />
-       <TableColumn prefWidth="75.0" text="Total Price" />
+         <TableColumn fx:id="tcDescription" prefWidth="75.0" text="Description" />
+         <TableColumn fx:id="tcQuantity" prefWidth="75.0" text="Quantity" />
+         <TableColumn fx:id="tcUPrice" prefWidth="75.0" text="Unit Price" />
+       <TableColumn fx:id="tcVatPer" prefWidth="75.0" text="VAT %" />
+         <TableColumn fx:id="tcVatPrice" prefWidth="75.0" text="VAT Cost" />
+       <TableColumn fx:id="tcTPrice" prefWidth="75.0" text="Total Price" />
      </columns>
    </TableView>
    <HBox prefHeight="31.0" prefWidth="778.0">
