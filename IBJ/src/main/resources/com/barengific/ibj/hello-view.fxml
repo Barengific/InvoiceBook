@@ -37,11 +37,17 @@
          </items>
        </Menu>
      </menus>
+      <VBox.margin>
+         <Insets bottom="-25.0" />
+      </VBox.margin>
    </MenuBar>
    <Label text="Invoice Form">
       <font>
          <Font size="36.0" />
       </font>
+      <VBox.margin>
+         <Insets bottom="-20.0" />
+      </VBox.margin>
    </Label>
    <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
       <children>
@@ -49,10 +55,28 @@
          <TextField fx:id="txtVATNo" promptText="VAT Number" />
          <TextField fx:id="txtBusinessName" promptText="Business Name" />
          <TextField fx:id="txtBusinessLogo" promptText="Business Logo" />
+         <DatePicker fx:id="dpDate" promptText="Invoice Date" />
       </children>
+      <VBox.margin>
+         <Insets bottom="-20.0" />
+      </VBox.margin>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
    </HBox>
-   <DatePicker fx:id="dpDate" promptText="Invoice Date" />
-   <TextArea fx:id="taBusinessAddress" prefHeight="200.0" prefWidth="200.0" promptText="Business Address" />
+   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+      <children>
+         <TextArea fx:id="taBusinessAddress" prefHeight="200.0" prefWidth="200.0" promptText="Business Address">
+            <HBox.margin>
+               <Insets />
+            </HBox.margin>
+         </TextArea>
+         <TextArea fx:id="taRecipientAddress" prefHeight="200.0" prefWidth="200.0" promptText="Recipient Address" />
+      </children>
+      <VBox.margin>
+         <Insets bottom="-10.0" />
+      </VBox.margin>
+   </HBox>
    <HBox fx:id="hboxItems" prefHeight="43.0" prefWidth="778.0" spacing="5.0">
       <children>
          <TextField fx:id="txtDescription" promptText="Item Description" />
@@ -62,8 +86,14 @@
          <TextField fx:id="txtVATPrice" promptText="VAT Price" />
          <TextField fx:id="txtTotalPrice" promptText="Total Price" />
       </children>
+      <VBox.margin>
+         <Insets bottom="-10.0" />
+      </VBox.margin>
    </HBox>
-   <Button fx:id="btnAddItems" mnemonicParsing="false" onAction="#onAddItemBtn" text="Add Item" />
+   <Button fx:id="btnAddItems" mnemonicParsing="false" onAction="#onAddItemBtn" text="Add Item">
+      <VBox.margin>
+         <Insets bottom="-10.0" />
+      </VBox.margin></Button>
    <TableView fx:id="tblItems" prefHeight="200.0" prefWidth="200.0">
      <columns>
          <TableColumn fx:id="tcDescription" prefWidth="75.0" text="Description" />
@@ -73,17 +103,24 @@
          <TableColumn fx:id="tcVatPrice" prefWidth="75.0" text="VAT Cost" />
        <TableColumn fx:id="tcTPrice" prefWidth="75.0" text="Total Price" />
      </columns>
+      <VBox.margin>
+         <Insets />
+      </VBox.margin>
    </TableView>
-   <HBox prefHeight="31.0" prefWidth="778.0">
+   <HBox prefHeight="31.0" prefWidth="778.0" spacing="5.0">
       <children>
          <TextField fx:id="txtTC" promptText="Terms &amp; Conditions" />
+         <Button fx:id="btnAddTerms" mnemonicParsing="false" onAction="#onAddTermsBtn" text="Add Terms" />
       </children>
+      <VBox.margin>
+         <Insets bottom="-10.0" />
+      </VBox.margin>
    </HBox>
-   <Button fx:id="btnAddTerms" mnemonicParsing="false" onAction="#onAddTermsBtn" text="Add Terms" />
    <TableView fx:id="tblTerms" prefHeight="200.0" prefWidth="200.0">
      <columns>
        <TableColumn fx:id="tcNo" prefWidth="75.0" text="Terms Number" />
        <TableColumn fx:id="tcTerms" prefWidth="75.0" text="Terms" />
      </columns>
    </TableView>
+   <Button fx:id="btnFinish" mnemonicParsing="false" onAction="#onFinishBtn" text="Finish" />
 </VBox>
